@@ -1,26 +1,12 @@
 # Troubleshooting
 
-## The local site has no styling
-
-If the terminal says it cannot find a path like this:
-
-```text
-/pratyushasangwan.com/theme/css/site.css
-```
-
-open `pelicanconf.py` and make sure this line is blank:
-
-```python
-SITEURL = ""
-```
-
-Then stop the local server with `Ctrl + C` and start it again with `make dev`.
-
-`pelicanconf.py` is for local previewing. The public address belongs in the GitHub repository variable named `SITE_URL`, including `https://`, after the custom domain is connected.
-
 ## The terminal mentions `/favicon.ico`
 
 Browsers ask every website for a tiny tab icon named `favicon.ico`. This starter does not include one yet, so Pelican prints that request. The message does not break the page or publishing.
+
+## `uv` is not found
+
+Install `uv`, then run `uv sync` again. The [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/) has the current instructions for macOS, Windows, and Linux.
 
 ## The new post is missing
 

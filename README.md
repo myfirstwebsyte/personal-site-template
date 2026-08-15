@@ -28,7 +28,7 @@ Use `make build` to generate the site once, and `make check` before publishing.
 
 Follow [the GitHub Pages setup guide](docs/SETUP_GITHUB_PAGES.md). It explains the one-time Pages setting and how to add a custom domain.
 
-If a local preview looks unstyled or prints an error, start with [troubleshooting](docs/TROUBLESHOOTING.md).
+For likely local-writing problems, start with [troubleshooting](docs/TROUBLESHOOTING.md).
 
 ## Give this site to its owner
 
