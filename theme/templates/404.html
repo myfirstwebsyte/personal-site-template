@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found · {{ SITENAME }}{% endblock title %}
+
+{% block content %}
+<section class="prose error-page">
+  <p class="eyebrow">404</p>
+  <h1>That page is not here.</h1>
+  <p>Try returning to the <a href="{{ SITEURL }}/">home page</a>.</p>
+</section>
+{% endblock content %}

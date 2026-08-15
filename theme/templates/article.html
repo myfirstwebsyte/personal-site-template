@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} · {{ SITENAME }}{% endblock title %}
+
+{% block content %}
+<article class="prose article">
+  <header class="article-header">
+    <p class="eyebrow">Writing</p>
+    <h1>{{ article.title }}</h1>
+    <p class="article-date"><time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime("%B %d, %Y") }}</time></p>
+  </header>
+  {{ article.content }}
+  {% if article.tags %}
+  <footer class="tags" aria-label="Tags">
+    {% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}
+  </footer>
+  {% endif %}
+</article>
+{% endblock content %}

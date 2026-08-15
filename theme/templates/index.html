@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock title %}
+
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">Personal website</p>
+  <h1>{{ SITENAME }}</h1>
+  <p class="subtitle">{{ SITESUBTITLE }}</p>
+</section>
+
+<section class="writing" aria-labelledby="latest-writing">
+  <div class="section-heading">
+    <h2 id="latest-writing">Latest writing</h2>
+    <a href="{{ SITEURL }}/archive/">Browse archive <span aria-hidden="true">→</span></a>
+  </div>
+  {% if articles_page.object_list %}
+    <div class="article-list">
+      {% for article in articles_page.object_list %}
+      <article class="article-card">
+        <p class="article-date"><time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime("%B %d, %Y") }}</time></p>
+        <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+        {% if article.summary %}<p>{{ article.summary }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>The first note is still being written.</p>
+  {% endif %}
+</section>
+{% endblock content %}
