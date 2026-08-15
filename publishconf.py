@@ -16,7 +16,10 @@ _owner, _, _repository_name = _repository.partition("/")
 _fallback_url = (
     f"https://{_owner}.github.io/{_repository_name}" if _owner and _repository_name else ""
 )
-SITEURL = os.environ.get("SITE_URL", _fallback_url).rstrip("/")
+# GitHub Actions defines SITE_URL as an empty string until the repository owner
+# creates the optional variable. Treat that as absent so project Pages sites use
+# their default https://owner.github.io/repository-name base path.
+SITEURL = (os.environ.get("SITE_URL") or _fallback_url).rstrip("/")
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
