@@ -13,6 +13,8 @@ For an unpublished draft, use `content/private-notes/`. Git ignores this local f
 
 To write in Obsidian, open the `content/` folder as a vault. See [the Obsidian guide](docs/OBSIDIAN.md).
 
+To understand where the site’s name, folders, URLs, theme, and publishing behavior are configured, read [the configuration guide](docs/CONFIGURATION.md).
+
 ## Work locally
 
 ```bash
