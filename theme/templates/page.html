@@ -2,6 +2,16 @@
 
 {% block title %}{{ page.title }} · {{ SITENAME }}{% endblock title %}
 
+{% block metadata %}
+<meta name="description" content="{{ page.summary|striptags|trim or SITESUBTITLE }}">
+<meta property="og:title" content="{{ page.title }} · {{ SITENAME }}">
+<meta property="og:description" content="{{ page.summary|striptags|trim or SITESUBTITLE }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ SITENAME }}">
+<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+<meta name="twitter:card" content="summary">
+{% endblock metadata %}
+
 {% block content %}
 <article class="prose page">
   <header class="article-header">

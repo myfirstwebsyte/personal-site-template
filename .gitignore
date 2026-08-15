@@ -4,3 +4,8 @@ __pycache__/
 output/
 cache/
 *.py[cod]
+
+# Obsidian keeps each person's workspace preferences here. Private notes are
+# intentionally local: this repository and its Git history are public.
+content/.obsidian/
+content/private-notes/

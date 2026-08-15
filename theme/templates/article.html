@@ -2,6 +2,16 @@
 
 {% block title %}{{ article.title }} · {{ SITENAME }}{% endblock title %}
 
+{% block metadata %}
+<meta name="description" content="{{ article.summary|striptags|trim }}">
+<meta property="og:title" content="{{ article.title }} · {{ SITENAME }}">
+<meta property="og:description" content="{{ article.summary|striptags|trim }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ SITENAME }}">
+<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta name="twitter:card" content="summary">
+{% endblock metadata %}
+
 {% block content %}
 <article class="prose article">
   <header class="article-header">

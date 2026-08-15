@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ SITESUBTITLE }}">
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    {% block metadata %}
+    <meta name="description" content="{{ SITESUBTITLE }}">
+    <meta property="og:title" content="{{ SITENAME }}">
+    <meta property="og:description" content="{{ SITESUBTITLE }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:url" content="{{ SITEURL }}/">
+    <meta name="twitter:card" content="summary">
+    {% endblock metadata %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/site.css">
+    {% if FEED_ALL_RSS %}
+    <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} RSS feed" href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">
+    {% endif %}
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -27,7 +38,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>Made slowly with words, Markdown, and care.</p>
+      <p>Made slowly with words, Markdown, and care.{% if FEED_ALL_RSS %} <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">RSS</a>{% endif %}</p>
     </footer>
   </body>
 </html>
