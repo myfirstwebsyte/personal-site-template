@@ -1,28 +1,17 @@
 # Give this website to its owner
 
-The intended end state is simple: Pratyusha owns the GitHub repository and `pratyushasangwan.com`. You can remain a collaborator if she wants help, but she should not depend on your account to publish, renew the domain, or recover access.
+Pratyusha now owns this GitHub repository. She should also control `pratyushasangwan.com`. You can remain a collaborator if she wants help, but she should not depend on your account to publish, renew the domain, or recover access.
 
-## Before you transfer anything
+## Ownership and access
 
-Pratyusha needs:
+Pratyusha should:
 
-1. A personal GitHub account with two-factor authentication enabled.
-2. Access to the domain registrar account for `pratyushasangwan.com`, including its renewal payment method.
-3. An installed copy of Obsidian if she wants to write there.
+1. Keep two-factor authentication and recovery codes for her GitHub account.
+2. Control the domain registrar account for `pratyushasangwan.com`, including its renewal payment method.
+3. Confirm **Settings → Pages** uses **GitHub Actions** as the publishing source.
+4. Install Obsidian if she wants to write there.
 
 Do not put passwords, recovery codes, or private drafts in this repository. A public GitHub repository makes every committed file public.
-
-## Give her the repository
-
-Transferring the repository is better than asking her to clone it: a clone gives her a copy, while a transfer makes her the actual owner.
-
-1. On GitHub, open this repository’s **Settings**.
-2. At the bottom of **General**, find **Danger Zone** and choose **Transfer**.
-3. Enter Pratyusha’s GitHub username and confirm the repository name.
-4. She accepts GitHub’s transfer invitation within 24 hours.
-5. After she accepts, she opens **Settings → Pages** and confirms that the source is **GitHub Actions**.
-
-GitHub automatically keeps you as a collaborator after a personal-account transfer. Remove yourself later if she prefers complete independence.
 
 ## Her first publishing setup — no terminal required
 
@@ -70,7 +59,7 @@ Local preview is useful, but it is not required for writing or publishing. It ad
 
 ## Add `pratyushasangwan.com`
 
-Do this **after** the repository transfer, so the domain is secured to Pratyusha’s GitHub account.
+The repository transfer is already complete, so the domain can now be secured to Pratyusha’s GitHub account.
 
 1. In her GitHub **profile Settings → Pages**, choose **Add a domain** and enter `pratyushasangwan.com`.
 2. GitHub shows a DNS `TXT` record. Add that exact record at the domain registrar, wait for it to appear, then click **Verify** in GitHub. Keep the TXT record afterwards.
@@ -104,4 +93,4 @@ DNS and certificates can take up to 24 hours. Do not use wildcard DNS records su
 
 This project publishes through a GitHub Actions workflow, so it does not need a `CNAME` file in the repository.
 
-For GitHub’s current screens and provider-specific details, see [transferring a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) and [managing a GitHub Pages custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+For GitHub’s current screens and provider-specific details, see [managing a GitHub Pages custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
