@@ -6,7 +6,7 @@ Browsers ask every website for a tiny tab icon named `favicon.ico`. This starter
 
 ## `uv` is not found
 
-Install `uv`, then run `uv sync` again. The [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/) has the current instructions for macOS, Windows, and Linux.
+You only need `uv` for local preview. Follow the **Optional: preview the site before publishing** section in [the handoff guide](HANDOFF.md), then run `uv sync` again.
 
 ## The new post is missing
 

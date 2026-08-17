@@ -18,10 +18,13 @@ This site’s `content/` folder is also an Obsidian vault. Open that folder in O
 
 ## Publish a note
 
-1. Move or create the finished note in `writing/`.
-2. Put the metadata at the very top of the file. Use `../docs/POST_TEMPLATE.md` as the model.
-3. Save the note.
-4. Run `make dev` to preview it, then `make check` before committing.
+1. Duplicate `POST_TEMPLATE.md` from the top level of the vault.
+2. Move the copy into `writing/` and give it a clear filename, such as `my-first-note.md`.
+3. Replace the title, date, slug, summary, and body text.
+4. Save the note.
+5. In GitHub Desktop, commit the change to `main` and push it. GitHub publishes the site automatically.
+
+Local preview with `make dev` is optional. Follow the **Optional: preview the site before publishing** section in [the handoff guide](HANDOFF.md) when you want it.
 
 ## Links
 

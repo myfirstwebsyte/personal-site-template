@@ -24,26 +24,49 @@ Transferring the repository is better than asking her to clone it: a clone gives
 
 GitHub automatically keeps you as a collaborator after a personal-account transfer. Remove yourself later if she prefers complete independence.
 
-## Her first local setup
+## Her first publishing setup — no terminal required
 
 After she accepts the transfer:
 
-1. On the repository page, click **Code**, copy the HTTPS address, and clone it to her computer.
-2. In a terminal inside the cloned folder, run:
+She can write and publish before installing any programming tools.
+
+1. Install [GitHub Desktop](https://desktop.github.com/) and sign in with her GitHub account.
+2. In GitHub Desktop, choose **File → Clone repository**, select the transferred repository, and choose a location on her computer.
+3. Install [Obsidian](https://obsidian.md/). In Obsidian, choose **Open folder as vault** and select the cloned repository’s `content/` folder.
+4. In Obsidian, duplicate `POST_TEMPLATE.md`, move the copy into `writing/`, rename it, and write the post.
+5. Return to GitHub Desktop. Under **Changes**, add a short summary, click **Commit to main**, then **Push origin**.
+6. GitHub Actions publishes the site automatically. She can open the website from the repository’s **Settings → Pages** screen.
+
+The `content/` folder is her writing desk. GitHub Desktop carries saved changes from that desk to GitHub; GitHub then rebuilds the public website.
+
+Read [write in Obsidian](OBSIDIAN.md) first. The [configuration guide](CONFIGURATION.md) explains the settings she can change later.
+
+## Optional: preview the site before publishing
+
+Local preview is useful, but it is not required for writing or publishing. It adds one tool: `uv`, which downloads the project’s Python tools into an isolated project folder.
+
+1. Install `uv` using one official method:
+
+   - macOS with Homebrew: `brew install uv`
+   - macOS without Homebrew: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+   - Windows: `winget install --id=astral-sh.uv -e`
+
+2. Close and reopen the terminal, then check the installation:
+
+   ```bash
+   uv --version
+   ```
+
+3. In GitHub Desktop, choose **Repository → Open in Terminal**. Then run:
 
    ```bash
    uv sync
    make dev
    ```
 
-3. Open `http://localhost:8090/` to see the site.
-4. In Obsidian, choose **Open folder as vault** and select the repository’s `content/` folder.
-5. Read these three short guides:
-   - [write in Obsidian](OBSIDIAN.md);
-   - [configure the site](CONFIGURATION.md); and
-   - [common local problems](TROUBLESHOOTING.md).
+4. Open `http://localhost:8090/`. Saved changes in `content/` and `theme/` rebuild automatically.
 
-To publish a new post, she creates a Markdown file in `content/writing/`, runs `make check`, then commits and pushes to `main`.
+`uv sync` only needs to run again when the project’s Python dependencies change. Use `make check` before a more involved publishing change; it builds the site once and turns warnings into errors.
 
 ## Add `pratyushasangwan.com`
 

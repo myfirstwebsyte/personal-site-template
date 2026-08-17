@@ -2,12 +2,17 @@
 
 A small personal website that turns Markdown into a live site with Pelican and GitHub Pages.
 
+## New writer? Start here
+
+You do not need Python or a terminal to write and publish. Use Obsidian to edit the `content/` folder and GitHub Desktop to commit and push the change. GitHub builds the website for you. Follow [the handoff guide](docs/HANDOFF.md) for the first setup.
+
 ## Write and publish
 
-1. Create a post with `make post TITLE="My first note"`, or copy `docs/POST_TEMPLATE.md` to `content/writing/`.
-2. Replace the metadata and write in Markdown.
-3. Run `make check`.
-4. Commit the file to `main`. GitHub Actions builds and publishes the site.
+1. Without local tools: duplicate `content/POST_TEMPLATE.md` in Obsidian and move the copy to `content/writing/`.
+2. With local tools: run `make post TITLE="My first note"`.
+3. Replace the metadata and write in Markdown.
+4. Optionally run `make check`.
+5. Commit the file to `main`. GitHub Actions builds and publishes the site.
 
 For an unpublished draft, use `content/private-notes/`. Git ignores this local folder, so private writing never enters the public repository.
 
