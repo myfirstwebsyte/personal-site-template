@@ -6,7 +6,7 @@ Browsers ask every website for a tiny tab icon named `favicon.ico`. This starter
 
 ## `uv` is not found
 
-You only need `uv` for local preview. Follow the **Optional: preview the site before publishing** section in [the handoff guide](HANDOFF.md), then run `uv sync` again.
+You only need `uv` for local preview. Follow the **Optional: preview the site before publishing** section in [the setup guide](SETUP.md), then run `uv sync` again.
 
 ## The new post is missing
 

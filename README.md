@@ -4,7 +4,7 @@ A small personal website that turns Markdown into a live site with Pelican and G
 
 ## New writer? Start here
 
-You do not need Python or a terminal to write and publish. Use Obsidian to edit the `content/` folder and GitHub Desktop to commit and push the change. GitHub builds the website for you. Follow [the handoff guide](docs/HANDOFF.md) for the first setup.
+You do not need Python or a terminal to write and publish. Use Obsidian to edit the `content/` folder and GitHub Desktop to commit and push the change. GitHub builds the website for you. Follow [the setup guide](docs/SETUP.md) for the first setup.
 
 ## Write and publish
 
@@ -39,4 +39,4 @@ For likely local-writing problems, start with [troubleshooting](docs/TROUBLESHOO
 
 ## Give this site to its owner
 
-See [the handoff guide](docs/HANDOFF.md). The recipient should own the GitHub repository, domain registrar account, and two-factor authentication recovery codes.
+See [the setup guide](docs/SETUP.md). The website owner should own the GitHub repository, domain registrar account, and two-factor authentication recovery codes.

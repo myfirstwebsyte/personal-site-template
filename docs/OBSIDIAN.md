@@ -24,7 +24,7 @@ This site’s `content/` folder is also an Obsidian vault. Open that folder in O
 4. Save the note.
 5. In GitHub Desktop, commit the change to `main` and push it. GitHub publishes the site automatically.
 
-Local preview with `make dev` is optional. Follow the **Optional: preview the site before publishing** section in [the handoff guide](HANDOFF.md) when you want it.
+Local preview with `make dev` is optional. Follow the **Optional: preview the site before publishing** section in [the setup guide](SETUP.md) when you want it.
 
 ## Links
 
